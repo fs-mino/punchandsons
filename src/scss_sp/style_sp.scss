@@ -1,0 +1,47 @@
+/**
+ * Table of Contents:
+ *
+ * 1.0 - Reset
+ * 2.0 - Module
+ * 3.0 - Basic
+ * 4.0 - Header
+ * 5.0 - Main
+ * 7.0 - Footer
+ * 8.0 - Print
+ * -----------------------------------------------------------------------------
+ */
+
+@charset "utf-8";
+
+// Compassのモジュールを使う
+// @import "compass/css3";
+// @import "compass/typography";
+// @import "compass/utilities";
+
+// サイト全体の変数を指定する
+@import "setting";
+
+// ミックスイン読み込み
+@import "mixin";
+
+// リセットCSS
+@import "reset";
+// @import "compass/reset";
+
+// 使いまわせるCSS群
+@import "module";
+
+// サイト大枠
+@import "basic";
+
+// ヘッダー
+@import "header";
+
+// 主にここに書く
+@import "main";
+
+// フッター
+@import "footer";
+
+// プリント対応する場合
+@import "print";

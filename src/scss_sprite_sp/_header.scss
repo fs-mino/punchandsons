@@ -1,0 +1,28 @@
+$btn-pager-next-name: 'btn-pager-next';
+$btn-pager-next-x: 0px;
+$btn-pager-next-y: 0px;
+$btn-pager-next-offset-x: 0px;
+$btn-pager-next-offset-y: 0px;
+$btn-pager-next-width: 36px;
+$btn-pager-next-height: 36px;
+$btn-pager-next-total-width: 74px;
+$btn-pager-next-total-height: 36px;
+$btn-pager-next-image: '../img/common/sprite/sprite-header.png';
+$btn-pager-next: (0px, 0px, 0px, 0px, 36px, 36px, 74px, 36px, '../img/common/sprite/sprite-header.png', 'btn-pager-next', );
+$btn-pager-prev-name: 'btn-pager-prev';
+$btn-pager-prev-x: 38px;
+$btn-pager-prev-y: 0px;
+$btn-pager-prev-offset-x: -38px;
+$btn-pager-prev-offset-y: 0px;
+$btn-pager-prev-width: 36px;
+$btn-pager-prev-height: 36px;
+$btn-pager-prev-total-width: 74px;
+$btn-pager-prev-total-height: 36px;
+$btn-pager-prev-image: '../img/common/sprite/sprite-header.png';
+$btn-pager-prev: (38px, 0px, -38px, 0px, 36px, 36px, 74px, 36px, '../img/common/sprite/sprite-header.png', 'btn-pager-prev', );
+$spritesheet-width: 74px;
+$spritesheet-height: 36px;
+$spritesheet-image: '../img/common/sprite/sprite-header.png';
+$spritesheet-sprites: ($btn-pager-next, $btn-pager-prev, );
+$spritesheet: (74px, 36px, '../img/common/sprite/sprite-header.png', $spritesheet-sprites, );
+

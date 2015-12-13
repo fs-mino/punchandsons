@@ -1,0 +1,37 @@
+/**
+ * Footer
+ * -----------------------------------------------------------------------------
+ */
+.totop{
+	text-align: right;
+}
+footer{
+	height: 100px;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	position: relative;
+
+	.copyright{
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		display: block;
+	}
+	nav{
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
+		ul{
+			li{
+				display: inline-block;
+				padding: 10px;
+			}
+			&.fnav{
+			
+			}
+			&.f_sns{
+			
+			}
+		}
+	}
+}

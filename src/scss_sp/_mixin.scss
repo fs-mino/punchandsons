@@ -1,0 +1,108 @@
+/**
+ * Mixin
+ * -----------------------------------------------------------------------------
+ */
+//サポートブラウザの設定
+$support-ie6: false;
+$support-ie7: false;
+$support-ie8: true;
+$support-ie9: true;
+$support-mozilla: true;
+$support-webkit : true;
+$support-opera  : true;
+
+
+// メディアクエリ
+
+$bp-tb     : 979px;
+$bp-sp     : 479px;
+
+@mixin media($media-width){
+	@if $media-width == sp{
+		@media only screen and (max-width:$bp-sp){
+			@content;
+		}
+	} @else if $media-width == tb{
+		@media only screen and (max-width:$bp-tb){
+			@content;
+		}
+	} 
+}
+
+// -----------------------------------------
+// Clearfix
+// -----------------------------------------
+
+@mixin clearfix {
+        @if $support-ie6 or $support-ie7 {
+            *zoom: 1;
+        }
+        &:after {
+            content: "."; 
+            display: block;
+            clear: both;
+            height: 0; 
+            visibility: hidden;
+        }
+}
+
+
+// -----------------------------------------
+// トランジション
+// -----------------------------------------
+
+@mixin trans($selector:all,$time:1s){
+	  transition: $selector $time;
+	  -moz-transition: $selector $time;
+	  -webkit-transition: $selector $time;
+	  -o-transition: $selector $time;
+}
+
+// -----------------------------------------
+// calc()
+// -----------------------------------------
+@mixin calc($property, $expression) { 
+  #{$property}: -moz-calc(#{$expression}); 
+  #{$property}: -o-calc(#{$expression}); 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+}
+
+// -----------------------------------------
+// Font size
+// -----------------------------------------
+@mixin fontsize($fontsize:1rem,$lineheight:1.5rem,$color:$textColor,$fontweight:inherit){
+	font-size:$fontsize;
+	line-height:$lineheight;
+	color:$color;
+	font-weight:$fontweight;
+	margin-top: -1 * ($lineheight - $fontsize)/2;
+	margin-bottom: -1 * ($lineheight - $fontsize)/2;
+}
+
+
+// -----------------------------------------
+// Absolute position(必要なところだけ入力)
+// -----------------------------------------
+@mixin absPosition ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+     position: absolute;
+     top: $top;
+     right: $right;
+     bottom: $bottom;
+     left: $left;
+}
+
+// -----------------------------------------
+// Opacity(IE8対応)
+// -----------------------------------------
+$set_prefix: -webkit-, -moz-, -ms-, '';
+@mixin set-prefix($property, $val) {
+  @each $prefix in $set_prefix {
+    #{$prefix}#{$property}: $val;
+  }
+}
+@mixin opacity($a) {
+  @include set-prefix(opacity, $a);
+  $IEalpha: $a * 100;
+  filter: alpha(opacity=$IEalpha); /* IE 8 */
+}

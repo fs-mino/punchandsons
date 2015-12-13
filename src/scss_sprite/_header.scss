@@ -1,0 +1,28 @@
+$tit-lineup-01-name: 'tit-lineup_01';
+$tit-lineup-01-x: 0px;
+$tit-lineup-01-y: 0px;
+$tit-lineup-01-offset-x: 0px;
+$tit-lineup-01-offset-y: 0px;
+$tit-lineup-01-width: 97px;
+$tit-lineup-01-height: 18px;
+$tit-lineup-01-total-width: 97px;
+$tit-lineup-01-total-height: 38px;
+$tit-lineup-01-image: '../img/common/sprite/sprite-header.png';
+$tit-lineup-01: (0px, 0px, 0px, 0px, 97px, 18px, 97px, 38px, '../img/common/sprite/sprite-header.png', 'tit-lineup_01', );
+$tit-lineup-02-name: 'tit-lineup_02';
+$tit-lineup-02-x: 0px;
+$tit-lineup-02-y: 20px;
+$tit-lineup-02-offset-x: 0px;
+$tit-lineup-02-offset-y: -20px;
+$tit-lineup-02-width: 38px;
+$tit-lineup-02-height: 18px;
+$tit-lineup-02-total-width: 97px;
+$tit-lineup-02-total-height: 38px;
+$tit-lineup-02-image: '../img/common/sprite/sprite-header.png';
+$tit-lineup-02: (0px, 20px, 0px, -20px, 38px, 18px, 97px, 38px, '../img/common/sprite/sprite-header.png', 'tit-lineup_02', );
+$spritesheet-width: 97px;
+$spritesheet-height: 38px;
+$spritesheet-image: '../img/common/sprite/sprite-header.png';
+$spritesheet-sprites: ($tit-lineup-01, $tit-lineup-02, );
+$spritesheet: (97px, 38px, '../img/common/sprite/sprite-header.png', $spritesheet-sprites, );
+

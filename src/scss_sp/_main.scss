@@ -1,0 +1,70 @@
+/**
+ * common
+ * -----------------------------------------------------------------------------
+ */
+
+
+
+#wrapAll{
+	
+}
+
+
+.cimg_wrap {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	img.cimg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+		
+
+body.page-sub{
+	#Mainpic2{
+	}
+	h2{
+		&.ttl01{
+
+		}
+		&.ttl02{
+
+		}
+		&.ttl03{
+
+		}
+		span {
+			img {
+			}
+		}
+	}
+	#content{
+		.section_wrap{
+		}
+	}
+	#breadcrumb{
+		ul{
+			li{
+				a{
+					&:hover{
+					}
+
+				}
+				span{
+
+				}
+				&:last-child{
+					span{
+					}
+				}
+			}
+		}
+
+	}
+}
+
