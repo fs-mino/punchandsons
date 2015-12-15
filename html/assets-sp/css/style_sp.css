@@ -530,50 +530,6 @@ article {
   border-top: 1px solid #d4d4d4; }
 
 /**
- * Header
- * -----------------------------------------------------------------------------
- */
-#wrapAll {
-  overflow: hidden; }
-
-#main {
-  width: 85%;
-  float: right; }
-
-#Side {
-  width: 10%;
-  height: 1000px;
-  float: left;
-  border-right: 1px solid #ccc;
-  position: relative; }
-  #Side h1 {
-    display: block;
-    margin-bottom: 100px;
-    padding-top: 50px;
-    text-align: center; }
-  #Side nav {
-    position: relative; }
-    #Side nav ul {
-      text-align: center; }
-      #Side nav ul li {
-        display: inline-block;
-        padding: 10px; }
-      #Side nav ul.gnav {
-        margin-bottom: 50px; }
-      #Side nav ul.sns {
-        overflow: hidden;
-        width: 100%;
-        text-align: center; }
-        #Side nav ul.sns li {
-          display: inline-block;
-          float: left;
-          padding: 5px; }
-          #Side nav ul.sns li a {
-            display: block; }
-            #Side nav ul.sns li a img {
-              width: 10px; }
-
-/**
  * common
  * -----------------------------------------------------------------------------
  */

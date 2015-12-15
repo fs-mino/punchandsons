@@ -15,7 +15,7 @@
 
 	// 個別設定
 	$page_class       = "page-home"; // ページクラスが必要な場合
-	$page_title       = "テンプレート"; // ページタイトル
+	$page_title       = "punchandsons"; // ページタイトル
 	$page_keywords    = ""; // ページ特有のキーワードがある場合
 	$page_description = ""; // ページ特有のdescriptionがある場合
 
@@ -47,27 +47,21 @@
 	<?php include ($root_path."/assets/inc/header.php"); ?>
 	<?php endif;  /////////// PC・SP振り分け完了?>
 	<div id="wrapAll">
-	<section id="Mainpic">
-		<div class="flexslider">
-			<ul class="slides">
-				<li>
-					<a href="#" target="_blank">
-						<img src="" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">
-						<img src="" alt="">
-					</a>
-				</li>
-				<li>
-					<a href="#" target="_blank">
-						<img src="" alt="">
-					</a>
-				</li>
-			</ul>
-		</div>
-	</section>
+		<article>
+			<section id="card" data-role="page">
+				<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+						<div class="front">
+							<img src="assets/img/common/punch.jpg" alt="">
+						</div>
+						<div class="back">
+							<img src="assets/img/common/catpattern.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+		</article>
+		
 	</div><!-- #main -->
 	</div>
 	<?php if(is_mobile()):  /////////// SPのみ?>
@@ -85,27 +79,8 @@
 <?php else:  /////////// PCのみ?>
 <?php include ($root_path."/assets/inc/script.php"); ?>
 <?php endif;  /////////// PC・SP振り分け完了?>
-<script src="<?php echo $local_path; ?>/js/library/jquery.flexslider-min.js"></script>
-<script src="<?php echo $local_path; ?>/js/cimg.js"></script>
-<script src="<?php echo $local_path; ?>/js/top.js"></script>
-<script type="text/javascript">
-$(window).load(function() {
-	$('.flexslider').flexslider({
-		animation: "slide",
-		controlsContainer: $(".ctrl"),
-	    	customDirectionNav: $("a.arr"),
-	    	easing:"easeInOutSine",
-	    	slideshowSpeed:10000,
-	    	animationSpeed:500
-	});
-	//スライドが一枚の時はDirection ArrowをRemove
-	if($("ul.slides li:not(.clone)").length==1){
-		$(".flex-direction-nav").remove();
-	}
-	//load時にずれるのでスタイル設定、-768pxにwidthを入れる
-	$("ul.slides").css("transform","translate3d(-768px, 0px, 0px)");
-});	
-</script>
+<script src="<?php echo $local_path; ?>assets/js/cimg.js"></script>
+<script src="<?php echo $local_path; ?>assets/js/top.js"></script>
 
 </body>
 </html>
