@@ -8,10 +8,10 @@
 
 	// ルートパス設定
 	//DOCUMENT_ROOT=serverのトップ、下層ディレクトリは$local_pathで指定
-	$local_path       = "/"; // ルート以外にある場合パスを記述(/から記述)
+	$local_path       = ""; // ルート以外にある場合パスを記述(/から記述)
 	$root_path        = $_SERVER['DOCUMENT_ROOT'].$local_path;
 	// 共通設定読み込み
-	include ($root_path."/assets/inc/setting.php");
+	include ($root_path."assets/inc/setting.php");
 
 	// 個別設定
 	$page_class       = "page-home"; // ページクラスが必要な場合
@@ -28,9 +28,9 @@
 <html dir="ltr" lang="ja">
 <head>
 <?php if(is_mobile()):  /////////// SPのみ?>
-<?php include ($root_path."/assets-sp/inc/meta.php");	?>
+<?php include ($root_path."assets-sp/inc/meta.php");	?>
 <?php else:  /////////// PCのみ?>
-<?php include ($root_path."/assets/inc/meta.php");	?>
+<?php include ($root_path."assets/inc/meta.php");	?>
 <?php endif;  /////////// PC・SP振り分け完了?>
 <?php // 個別CSSなど  ?>
 </head>
@@ -41,10 +41,10 @@
 		/////////////////////////////////////////////////////////////////////////////////////////////////////
 	?>
 	<?php if(is_mobile()):  /////////// SPのみ?>
-	<?php include ($root_path."/assets-sp/inc/nav.php"); ?>
-	<?php include ($root_path."/assets-sp/inc/header.php"); ?>
+	<?php include ($root_path."assets-sp/inc/nav.php"); ?>
+	<?php include ($root_path."assets-sp/inc/header.php"); ?>
 	<?php else:  /////////// PCのみ?>
-	<?php include ($root_path."/assets/inc/header.php"); ?>
+	<?php include ($root_path."assets/inc/header.php"); ?>
 	<?php endif;  /////////// PC・SP振り分け完了?>
 	<div id="wrapAll">
 		<article>
@@ -65,9 +65,9 @@
 	</div><!-- #main -->
 	</div>
 	<?php if(is_mobile()):  /////////// SPのみ?>
-	<?php include ($root_path."/assets-sp/inc/footer.php"); ?>
+	<?php include ($root_path."assets-sp/inc/footer.php"); ?>
 	<?php else:  /////////// PCのみ?>
-	<?php include ($root_path."/assets/inc/footer.php"); ?>
+	<?php include ($root_path."assets/inc/footer.php"); ?>
 	<?php endif;  /////////// PC・SP振り分け完了?>
 
 	<?php 
@@ -77,7 +77,7 @@
 	?>
 <?php if(is_mobile()):  /////////// SPのみ?>
 <?php else:  /////////// PCのみ?>
-<?php include ($root_path."/assets/inc/script.php"); ?>
+<?php include ($root_path."assets/inc/script.php"); ?>
 <?php endif;  /////////// PC・SP振り分け完了?>
 <script src="<?php echo $local_path; ?>assets/js/cimg.js"></script>
 <script src="<?php echo $local_path; ?>assets/js/top.js"></script>
