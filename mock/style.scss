@@ -1,0 +1,117 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	line-height: 1;
+	background-color: #eee;
+}
+
+
+.pageWrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+
+.print {
+
+	overflow: hidden;
+
+	&_patbg {
+		width: 270cm;
+		height: 100%;
+		img {
+			float: left;
+		}
+	}
+
+	&_mask {
+		position: absolute;
+		top: 0;
+		left: 0;
+		img {
+			width: 100%;
+		}
+	}
+	&_cap {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+
+.pageWrap_inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1000%;
+	height: 100%;
+	-webkit-transition: left .8s cubic-bezier(.18,.7,.47,.99);
+
+	@for $i from 0 through 10 {
+		&.cur#{$i} {
+			left: $i * -100%;
+		}
+	}
+}
+
+.nextBtn:hover {
+	color: #f00;
+	border-color: #f00;
+}
+
+
+h2 {
+	padding-top: 50px;
+}
+
+
+.page  {
+	display: block;
+	float: left;
+	width: 10%;
+	height: 100%;
+	-webkit-transition: top .75s, opacity .75s;
+	text-align: center;
+	background-color: #fef;
+
+	&:nth-child(odd) {
+		background-color: #ffe;
+	}
+
+	&:nth-child(1) {
+		background-color: #fff;
+	}
+
+	&_inner {
+		position: relative;
+	}
+}
+
+
+.scanBtn {
+	position: relative;
+
+	#file {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+	}
+}
+
+
+.nextBtn {
+	line-height: 1;
+	display: inline-block;
+	margin: 10px 10px;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #000;
+	border: 2px solid #000;
+}

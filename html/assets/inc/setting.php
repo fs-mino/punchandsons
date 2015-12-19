@@ -12,9 +12,9 @@
 	$jquery_version   = "1.10.2";
 
 	// サイトのタイトル
-	$site_title       = "muta（ムータ）";
-	$site_description = "muta（ムータ）オフィシャルサイト。時計ストラップ、財布、鞄、ベルト等の各種高級革製品からキーホルダー、カフリンク、ピンバッジ等の各種アイテムまで、個性を際立たせるファッションアイテム。";
-	$site_keywords    = "muta,ムータ,株式会社ヤマミ,ファッションアイテム,時計ストラップ,キーホルダー,カフリンク,ピンバッジ,財布,鞄,ベルト,革製品,ウィリアム,オロビアンコ";
+	$site_title       = "punchandsons";
+	$site_description = "punchandsonsとゆかいな仲間たち";
+	$site_keywords    = "punchandsons";
 
 	// IE6の透過png対応の有り/無し
 	$ie6png           = false; //対応する true / 対応しない false
