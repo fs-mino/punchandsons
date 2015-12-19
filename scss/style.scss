@@ -1,6 +1,7 @@
 // Base variable
 $baseBlue:#aee3e4;
 $baseWhite:#eee;
+$btn:#7079cf;
 
 //reset
 h1,h2,p,span,em,ul,li{
@@ -74,12 +75,15 @@ body {
 	@for $i from 0 through 10 {
 		&.cur#{$i} {
 			left: $i * -100%;
-			.pageCommon{
+			& + .pageCommon{
 				ul{
 					li{
-						&:nth-child(#{$i+1}){
-							opacity: 1;
+						@for $j from 0 through $i{
+							&:nth-child(#{$j+1}){
+								opacity: 1;
+							}
 						}
+						
 					}
 				}
 			}
@@ -87,6 +91,19 @@ body {
 	}
 }
 
+.nextBtn{
+	display:inline-block;
+	width: auto !important;
+	background-color:$btn;
+	padding:0 36px;
+	height:44px;
+	border-radius:23px;
+	line-height:44px;
+	cursor:pointer;
+	img{
+		vertical-align: middle;
+	}
+}
 .nextBtn:hover {
 	color: #f00;
 	border-color: #f00;
@@ -128,6 +145,7 @@ h2 {
 	width:100%;
 	height:100%;
 	clear:both;
+	pointer-events:none;
 	h1,p,ul{
 		position:absolute;
 	}
@@ -184,12 +202,21 @@ h2 {
 }
 
 
-.nextBtn {
-	line-height: 1;
-	display: inline-block;
-	margin: 10px 10px;
-	padding: 10px 20px;
-	text-decoration: none;
-	color: #000;
-	border: 2px solid #000;
+//pages
+.page{
+	.static1{
+		img{
+			text-align: center;
+		}
+		h2{
+			width:21.2%;
+			margin:0 auto;
+		}
+		p{
+			width:35.1%;
+			margin:28px auto 20px auto;
+		}
+	}
+
 }
+
