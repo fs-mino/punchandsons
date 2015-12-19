@@ -38,7 +38,7 @@ var pageLoadCallback = [
 
 			// 柄を取得し、img要素に突っ込む
 			var _pattern_img = pattern.getPattern(100);
-			
+
 			document.getElementById('pattern_preview').setAttribute('src',  _pattern_img );
 			var _bgpat_elem   = document.getElementById('print_patbg').getElementsByTagName('img');
 			for (var _i = 0; _i < _bgpat_elem.length; _i++) {
