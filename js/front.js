@@ -3,17 +3,20 @@
 		init();
 	});
 
-	$("#chooseList li").click(function(){
-		$(this).addClass('selected');
-		selectAnimal(this);
+	$("#chooseAnimal li").click(function(){
+		$("#chooseAnimal li").not(this).removeClass('selected');
+		$(this).toggleClass('selected');
+		selectAnimal();
 	});
 
 	function init(){
 		$("body").addClass('load');
 	}
 
-	function selectAnimal(obj){
-		var myFunc="setAnimal("+$("#chooseList li").index(obj)+1+");";
+	function selectAnimal(){
+		var selected=$(".selected");
+		var myFunc="setAnimal("+($("#chooseAnimal li").index(selected)+1)+");";
+		console.log(myFunc);
 		$("#chooseBtn").attr("onclick",myFunc);
 	}
 })();

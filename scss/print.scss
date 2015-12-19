@@ -1,0 +1,25 @@
+.bgpat{
+	margin:-5% 0 0 0 !important;
+}
+
+.pageCommon,.contents{
+	display: none !important;
+}
+
+
+
+.print_mask,.print_patbg{
+	display:block;
+}
+
+.print_mask{
+	img{
+		width: auto;
+		height: 100%;
+		z-index: 99999;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
+
