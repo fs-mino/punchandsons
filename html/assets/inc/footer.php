@@ -7,7 +7,7 @@
 	/////////////////////////////////////////////////////////////////////////////////////////////////////
 ?>
 
-<div class="totop">
+<!-- <div class="totop">
 	<a href="javascript:void(0);"><img src="/img/totop.png" alt="Totop" width="xxx" height="xxx"></a>
 </div>
 <footer>
@@ -27,4 +27,4 @@
 		</ul>
 	</nav>
 	<div class="copyright"><img src="/img/copyright.png" alt="copyright"></div>
-</footer>
+</footer> -->

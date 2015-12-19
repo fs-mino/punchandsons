@@ -61,16 +61,16 @@
 	<meta property="og:site_name" content="<?php echo $site_title; ?>">
 	<meta property="og:type" content="<?php echo $type; ?>">
 	<meta name="robots" content="index,follow">
-	<link rel="shortcut icon" href="<?php echo $rocal_path; ?>/favicon.ico">
-	<link rel="apple-touch-icon" href="<?php echo $rocal_path; ?>/shortcut.png">
+	<link rel="shortcut icon" href="<?php echo $local_path; ?>/favicon.ico">
+	<link rel="apple-touch-icon" href="<?php echo $local_path; ?>/shortcut.png">
 	<?php if ($telephone == true): ?><meta name="format-detection" content="telephone=no"><?php endif; ?>
 
 	<?php if ($viewport == true): ?><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><?php endif; ?>
 	<!--[if lt IE 9]>
-	<script src="<?php echo $rocal_path; ?>/js/html5shiv-printshiv.js"></script>
+	<script src="<?php echo $local_path; ?>assets/js/library/html5shiv-printshiv.js"></script>
 	<![endif]-->
 	<link href='//fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="<?php echo $rocal_path; ?>/css/style.css" media="screen,print">
+	<link rel="stylesheet" href="<?php echo $local_path; ?>assets/css/style.css" media="screen,print">
 
 	<?php if ($ga != ""): ?>
 		<script>

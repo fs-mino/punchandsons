@@ -6,7 +6,7 @@
 	//
 	/////////////////////////////////////////////////////////////////////////////////////////////////////
 ?>
-<header>
+<!-- <header>
 	<h1 class="logo"><a href="/"><img src="/img/logo.png" alt="logo"></a></h1>
 	<nav>
 		<ul class="gnav">
@@ -23,4 +23,4 @@
 			<li class="sns_in"><a href="#" target="_blank"><img src="/img/ico-in.png" alt="Instagram"></a></li>
 		</ul>
 	</nav>
-</header>
+</header> -->

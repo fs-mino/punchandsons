@@ -4,108 +4,33 @@
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////
-//  INIT
-////////////////////////////////////////////////////////////////
-var WIN=$(window)
-WIN.ready(function(){
 
-});
+;(function(){
 
-WIN.load(function(){
-	LAYOUT_SET()
-});
+  var $pages;
 
+  function urlChangeHandler(){
+    var pageid = parseUrl( location.hash );
 
+    $pages
+      .detach()
+      .filter(".page"+pageid)
+      .appendTo("article");
+  };
 
-WIN.resize(function(){
-	LAYOUT_SET()
-});
+  function parseUrl(url) {
+    return url.slice(1) ||1;
+  };
 
-jQuery.event.add(window,"load",function(){
-    LAYOUT_SET()
-});
+  function init() {
+    $pages = $("[data-role='page']").detach();
+    // pageをDOMから外す
+    $(window)
+      .on("hashchange", urlChangeHandler)
+      .trigger("hashchange");
+       // 該当のpageをDOMにつける、load時も発火するようtrigger使う
+  };
 
-var STYLE_TOP
-function LAYOUT_SET(){
-	// CIMG_INIT()
-	$('#Mainpic').height(WINH)
-}
+  init();
 
-WIN.scroll(function(){
-	SCROLL = WIN.scrollTop();
-});
-
-////////////////////////////////////////////////////////////////
-// LATEST NEWS LOAD
-////////////////////////////////////////////////////////////////
-$(function(){
-  var cuUrl=location.href;
-  var brandUrl="http://muta.flabo.jp/";
-  // var brandUrl="http://www.muta-japan.com/";
-  if(cuUrl.match("https")){
-    var brandUrl = "https://muta.flabo.jp/";
-  }else{
-    var brandUrl="http://muta.flabo.jp/";
-  }
-  function loadContents(){
-      $("#load-news").load(brandUrl+"/newsfeed/");
-      $("#load-blog").load(brandUrl+"/rss/");
-    }
-    loadContents();
-});
-
-
-
-
-////////////////////////////////////////////////////////////////
-// CUT TXT(重いのであまり使わない)
-////////////////////////////////////////////////////////////////
-jQuery(function($) {
-  $('#Blog div.list dl dd p').each(function() {
-    var $target = $(this);
-     var html = $target.html();
-     var $clone = $target.clone();
-    $clone
-      .css({
-        display: 'none',
-        position : 'absolute',
-        overflow : 'visible'
-      })
-      .width($target.width())
-      .height('auto');
-     $target.after($clone); 
-    // 指定した高さになるまで、1文字ずつ消去していく
-    while((html.length > 0) && ($clone.height() > $target.height())) {
-      html = html.substr(0, html.length - 1);
-      $clone.html(html + '...');
-    } 
-    $target.html($clone.html());
-    $clone.remove();
-  });
-});
-
-////////////////////////////////////////////////////////////////
-//  NAV FIXED
-////////////////////////////////////////////////////////////////
-  var $win = $(window);
-  var $header = $('header');
-  var navfixed=$("#nav-fixed");
-  var navtop=$("#nav-top");
-  var winW=$win.height();
-  var minHeight = winW-77;
-
-$(function(){
- function scroll() {
-    if($win.scrollTop() > minHeight) {
-      navtop.hide();
-      navfixed.show();
-    } else {
-      navtop.show();
-      navfixed.hide();
-    }
-  }
-  $win.scroll(scroll);
-  scroll();
-});
- 
+})();
