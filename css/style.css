@@ -644,10 +644,6 @@ body.load .page .static0 .pagePic ul li:nth-child(5) {
   margin-top: 15px;
 }
 
-#pattern_preview {
-  display: none;
-}
-
 .scanBtn {
   position: relative;
 }

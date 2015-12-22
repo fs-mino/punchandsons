@@ -16,7 +16,6 @@
 	function selectAnimal(){
 		var selected=$(".selected");
 		var myFunc="setAnimal("+($("#chooseAnimal li").index(selected)+1)+");";
-		console.log(myFunc);
 		$("#chooseBtn").attr("onclick",myFunc);
 	}
 })();
