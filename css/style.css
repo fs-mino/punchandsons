@@ -757,6 +757,29 @@ body.load .page .static0 .pagePic ul li:nth-child(5) {
   display: block;
   margin: 25px auto 0 auto;
 }
-.pageWrap_inner .static4 .contentsPrint {
+.pageWrap_inner .bgpat {
+  overflow: hidden;
+}
+.pageWrap_inner .static4 .contents {
+  display: block !important;
+}
+.pageWrap_inner .static4 .contents .print_wrapper {
+  width: 1000px;
+  height: 480px;
+  overflow: hidden;
+}
+.pageWrap_inner .static4 .contents .dt {
+  display: table;
+  width: 100%;
+  margin-top: 23px;
+}
+.pageWrap_inner .static4 .contents .dt .dtc {
+  display: table-cell;
+  vertical-align: middle;
+}
+.pageWrap_inner .static4 .contents .dt .dtc h2 {
+  margin-bottom: 0;
+}
+.pageWrap_inner .static5 .contentsPrint {
   display: none;
 }

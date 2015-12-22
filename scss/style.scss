@@ -523,9 +523,36 @@ body {
 			}
 		}
 	}//static3
+	.bgpat{
+		overflow: hidden;
+	}
 	.static4{
+		.contents{
+			display: block !important;
+			.print_wrapper{
+				width:1000px;
+				height: 480px;
+				overflow:hidden;
+				#print_patbg{
+				}
+			}
+			.dt{
+				display: table;
+				width:100%;
+				margin-top:23px;
+				.dtc{
+					display: table-cell;
+					vertical-align: middle;
+					h2{
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}//static4
+	.static5{
 		.contentsPrint{
 			display: none;
 		}
-	}
+	}//static5
 }

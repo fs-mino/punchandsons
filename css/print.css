@@ -6,9 +6,9 @@
   display: none !important;
 }
 
-.print_mask, .print_patbg,.contentsPrint {
-  display: block !important;
-} 
+.print_mask, .print_patbg {
+  display: block;
+}
 
 .print_mask img {
   width: auto;
