@@ -3,74 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <title>punch and sons</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=np">
+<meta name="viewport" content="width=600, initial-scale=1, user-scalable=np">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link rel="stylesheet" href="css/style.css" media="screen">
+<link rel="stylesheet" href="css/style.css" media="screen,print">
 <link rel="stylesheet" href="css/print.css" media="print">
 </head>
 <body>
 
+<div id="loader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <p>loading...</p>
+</div>
+
+
 <div class="pageWrap">
 	<div class="pageWrap_inner">
 		<div class="page cur">
-			<div class="page_inner">
-				<br><br><br>
-				<h2>punch and sons</h2>
-				<img src="img/img1.jpg">
-				<p>Tap start button to create your own animal!</p>
-				<p class="nextBtn" onclick="nextPage();">start</p>
+			<div class="page_inner static0">
+				<div class="contents">
+					<div class="pagePic">
+						<img src="img/img1.png" width="100%">
+						<ul>
+							<li><img src="img/p1.png" alt=""></li>
+							<li><img src="img/p5.png" alt=""></li>
+							<li><img src="img/p3.png" alt=""></li>
+							<li><img src="img/p2.png" alt=""></li>
+							<li><img src="img/p4.png" alt=""></li>
+						</ul>
+					</div>
+					<h2 class="lead">Tap start button and create your own animal!</h2>
+					<p class="nextBtn" onclick="nextPage();"><img src="img/btn_txt1.png" width="54"></p>
+					<ul class="pagePunch">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- /.page -->
 
 		<div class="page">
-			<div class="page_inner">
-				<h2>1. PUNCH</h2>
-				<img src="img/img2.jpg" height="300">
-				<p>punch, punch, punch! punch!! punch!!!!!!</p>
-				<p class="nextBtn" onclick="nextPage();">enough..</p>
+			<div class="page_inner static1">
+				<div class="contents">
+					<h2>Punch  A LOT of holes on your punch card!</h2>
+					<img src="img/img2.jpg" height="226" width="400">
+					<p class="nextBtn" onclick="nextPage();"><img src="img/btn_txt2.png" height="12" width="70"></p>
+					<ul class="pagePunch">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- /.page -->
 
 		<div class="page">
-			<div class="page_inner">
-				<h2>2. SCAN</h2>
-				<img src="img/img3.jpg" height="300">
-				<p>Scan your punch card with your iPad camera.</p>
-				<p class="nextBtn scanBtn" onclick=""><input type="file" name="file" id="file">scan</p>
+			<div class="page_inner static2">
+				<div class="contents">
+					<h2>Scan your punch card with your iPad camera.</h2>
+					<div class="pagePic"><img src="img/img3.jpg" height="226" width="400"><img src="img/img3_1.png" height="120" width="242"></div>
+					<p class="nextBtn scanBtn" onclick=""><input type="file" name="file" id="file"><img src="img/btn_txt3.png" alt="" width="70" height="12"></p>
+					<ul class="pagePunch">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- /.page -->
 
 		<div class="bgpat page">
-			<div class="page_inner">
-				<h2>3. SELECT ANIMAL</h2>
-				<div id="cnv"></div>
-				<img src="" id="pattern_preview"><br>
-				<p class="nextBtn" onclick="setAnimal(1);">サル</p>
-				<p class="nextBtn" onclick="setAnimal(2);">イヌ</p>
-				<p class="nextBtn" onclick="setAnimal(3);">キジ</p>
+			<div class="page_inner static3">
+				<div class="contents">
+					<h2>Choose your favorite animal</h2>
+					<div id="cnv"></div>
+					<ul id="chooseAnimal">
+						<li><img src="img/img4.png" width="85" alt=""><span>Giraffe</span></li>
+						<li><img src="img/img4.png" width="85" alt=""><span>Giraffe</span></li>
+						<li><img src="img/img4.png" width="85" alt=""><span>Giraffe</span></li>
+					</ul>
+					<p id="chooseBtn" class="nextBtn"><img src="img/btn_txt4.png" alt="" width="70" height="12"></p>
+					<img src="" id="pattern_preview"><br>
+					<!-- <p class="nextBtn" onclick="setAnimal(1);">サル</p>
+					<p class="nextBtn" onclick="setAnimal(2);">イヌ</p>
+					<p class="nextBtn" onclick="setAnimal(3);">キジ</p> -->
+					<ul class="pagePunch">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- /.page -->
 
 		<div class="bgpat page">
-			<div class="page_inner">
-
-				<div class="print_patbg" id="print_patbg">
-					<img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src="">
-
+			<div class="page_inner static4">
+				<div class="contents">
+					<div class="print_wrapper" id="print_wrapper">
+						<div class="print_mask">
+							<img id="print_mask_img" src="">
+						</div>
+						<div class="print_patbg" id="print_patbg">
+							<img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src="">
+						</div>
+					</div>
+					<div class="dt">
+						<div class="dtc">
+							<h2>You like it?</h2>
+							<p class="nextBtn" onclick="nextPage();">YES</p><br>
+						</div>
+					</div>
 				</div>
+			</div>
+		</div>
+		<!-- /.page -->
 
-				<div class="print_mask">
-					<img id="print_mask_img" src="">
-				</div>
+		<div class="bgpat page">
+			<div class="page_inner static5">
+				<div class="contents">
+					<h2>Print and craft your original animal!</h2>
+					<div class="pagePic"><img src="img/img5.jpg" alt=""></div>
+					<div class="contentsPrint">
+						<div class="print_mask">print_mask_img
+							<img id="print_mask_img" src="">
+						</div>
+						<div class="print_patbg" id="print_patbg">
+							<img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src=""><img src="">
+						</div>
+					</div>
+					<div class="print_cap">
+						<p class="nextBtn" href="/#print_wrapper" onclick="print();">PRINT</p><br>
+						<!-- <p class="nextBtn" onclick="location.reload();">back to top</p> -->
+					</div>
 
-				<div class="print_cap">
-					<p class="nextBtn" onclick="print();">print</p><br>
-					<p class="nextBtn" onclick="location.reload();">back to top</p>
+					<ul class="pagePunch">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
 				</div>
 
 			</div>
@@ -78,12 +158,28 @@
 		<!-- /.page -->
 	</div>
 
+	<div class="pageCommon">
+		<h1><img src="img/logo.gif" width="100%"></h1>
+		<p><img src="img/lead.gif" width="100%"></p>
+		<ul class="pager">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</div>
+	<!-- /.pageCommon -->
+
 </div>
 <!-- /.pageWrap -->
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script src="js/pages.js"></script>
 <script src="js/pattern.js"></script>
 <script src="js/display.js"></script>
+<script src="js/front.js"></script>
 
 </body>
 </html>
