@@ -10,6 +10,9 @@
   display: block;
 }
 
+.print_mask {
+  display: block !important;
+}
 .print_mask img {
   width: auto;
   height: 100%;

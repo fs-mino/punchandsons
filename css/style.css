@@ -767,16 +767,16 @@ body.load .page .static0 .pagePic ul li:nth-child(5) {
 .pageWrap_inner .static4 .contents .print_mask {
   display: none;
 }
-.pageWrap_inner .static4 .contents .dt {
+.pageWrap_inner .static4 .dt {
   display: table;
   width: 100%;
   margin-top: 23px;
 }
-.pageWrap_inner .static4 .contents .dt .dtc {
+.pageWrap_inner .static4 .dt .dtc {
   display: table-cell;
   vertical-align: middle;
 }
-.pageWrap_inner .static4 .contents .dt .dtc h2 {
+.pageWrap_inner .static4 .dt .dtc h2 {
   margin-bottom: 0;
 }
 .pageWrap_inner .static5 .contentsPrint {
