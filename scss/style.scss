@@ -533,9 +533,9 @@ body {
 				#print_patbg{
 				}
 			}
-			.print_mask{
-				display: none;
-			}
+			// .print_mask{
+			// 	display: none;
+			// }
 		}
 		.dt{
 				display: table;
@@ -549,12 +549,17 @@ body {
 					}
 				}
 			}
-	}//static4
-	.static5{
-		.contentsPrint{
-			display: none;
-		}
-	}//static5
+	}
+	//static4
+	// .static5{
+	// 	.contentsPrint{
+	// 		display: none;
+	// 	}
+	// }//static5
+}
+
+.contentsPrint{
+	display: none;
 }
 
 #pattern_preview{

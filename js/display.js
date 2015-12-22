@@ -37,13 +37,17 @@ var pageLoadCallback = [
 		function() {
 
 			// 柄を取得し、img要素に突っ込む
-			var _pattern_img = pattern.getPattern(100);
+			var _pattern_img = pattern.getPattern(200);
 
 			document.getElementById('pattern_preview').setAttribute('src',  _pattern_img );
-			var _bgpat_elem   = document.getElementById('print_patbg').getElementsByTagName('img');
-			for (var _i = 0; _i < _bgpat_elem.length; _i++) {
-				_bgpat_elem[_i].setAttribute('src',  _pattern_img );
+			var _bgpat_wrap_elem   = document.getElementById('print_patbg');
+			var _echo = '';
+			for (var _i = 0; _i < 200; _i++) {
+				_echo += '<img src="' + _pattern_img + '">';
 			}
+			_bgpat_wrap_elem.innerHTML = _echo;
+
+			document.getElementById('preview_patbg').style.background = 'url(' + pattern.getPattern(102) + ')';
 
 		},
 

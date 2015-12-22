@@ -1,26 +1,59 @@
-.bgpat{
-	margin:-5% 0 0 0 !important;
-}
+// .bgpat{
+// 	margin:-5% 0 0 0 !important;
+// }
 
-.pageCommon,.contents{
-	display: none !important;
-}
+// .pageCommon,.contents{
+// 	display: none !important;
+// }
 
 
 
-.print_mask,.print_patbg{
-	display:block;
-}
+// .print_mask,.print_patbg{
+// 	display:block;
+// }
 
+// body {
+// 	background-color: #ccc;
+// 	-webkit-print-color-adjust: exact;
+// }
 .print_mask{
 	display:block !important;
 	img{
-		width: auto;
-		height: 100%;
+		height: 150mm !important;
+		// width: 100%;
+		// height: 100%;
 		z-index: 99999;
-		position: absolute;
+		// position: absolute;
 		left: 0;
 		top: 0;
 	}
 }
+.print_patbg {
+	overflow: hidden;
+	&_inner {
+		// display: none;
+	  width:351mm;
+	  height:272mm;
+	}
+	img {
+		height: 32mm;
+	}
+}
+.pageWrap {
+	display: none;
+}
+.loader {
+	display: none;
+}
+.contentsPrint {
+	position: absolute;
+  top:0 !important;
+  left:0 !important;
+  width:251mm !important;
+  height:172mm !important;
+  display: block;
+  overflow: hidden;
+}
+
+
 

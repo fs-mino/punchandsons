@@ -764,9 +764,6 @@ body.load .page .static0 .pagePic ul li:nth-child(5) {
   height: 480px;
   overflow: hidden;
 }
-.pageWrap_inner .static4 .contents .print_mask {
-  display: none;
-}
 .pageWrap_inner .static4 .dt {
   display: table;
   width: 100%;
@@ -779,7 +776,8 @@ body.load .page .static0 .pagePic ul li:nth-child(5) {
 .pageWrap_inner .static4 .dt .dtc h2 {
   margin-bottom: 0;
 }
-.pageWrap_inner .static5 .contentsPrint {
+
+.contentsPrint {
   display: none;
 }
 
