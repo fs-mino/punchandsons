@@ -397,9 +397,6 @@ body {
 	}
 }
 
-#pattern_preview{
-	display:none;
-}
 
 .scanBtn {
 	position: relative;
@@ -536,6 +533,9 @@ body {
 				#print_patbg{
 				}
 			}
+			.print_mask{
+				display: none;
+			}
 			.dt{
 				display: table;
 				width:100%;
@@ -555,4 +555,8 @@ body {
 			display: none;
 		}
 	}//static5
+}
+
+#pattern_preview{
+	display:none;
 }
