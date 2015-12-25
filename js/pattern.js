@@ -33,7 +33,6 @@ Pattern.prototype = {
 		_self.d = [];
 	},
 
-	// comment
 	loadPunchCard: function( _pc_img_uri, _callback ) {
 		var _self = this;
 
@@ -66,8 +65,8 @@ Pattern.prototype = {
 	getChange: function( _img_obj ) {
 
 		var _self      = this;
-		var _cnv       = document.createElement( 'canvas' );
 		var _wrap_elem = document.getElementById( 'cnv' );
+		var _cnv       = document.createElement( 'canvas' );
 		var _ctx       = _cnv.getContext('2d');
 		var _corner    = [];
 
@@ -81,7 +80,7 @@ Pattern.prototype = {
 		_cnv.style.display = 'none';
 
 		// get cell data
-		function getCellData( _ctx, _x, _y, _cnr, _devby ) {
+		function getCellData( _ctx, _x, _y, _cnr, _divby ) {
 
 			try {
 
@@ -90,13 +89,13 @@ Pattern.prototype = {
 				for (var _i = 0; _i < 4; _i++) {
 					var _xy = _i % 2;
 					var _tb = Math.floor( _i / 2);
-					var _val = _cnr[ _tb * 2 ][ _xy ] + ( ( _cnr[ _tb * 2 + 1 ][ _xy ] - _cnr[ _tb * 2 ][ _xy ]) * ( _x / _devby[0] ) );
+					var _val = _cnr[ _tb * 2 ][ _xy ] + ( ( _cnr[ _tb * 2 + 1 ][ _xy ] - _cnr[ _tb * 2 ][ _xy ]) * ( _x / _divby[0] ) );
 					_point[_tb][_xy] = _val;
 				}
 
 				var _pos = {
-					x: _point[0][0] + ( (_point[1][0] - _point[0][0]) * ( _y / _devby[1]) ),
-					y: _point[0][1] + ( (_point[1][1] - _point[0][1]) * ( _y / _devby[1]) ) };
+					x: _point[0][0] + ( (_point[1][0] - _point[0][0]) * ( _y / _divby[1]) ),
+					y: _point[0][1] + ( (_point[1][1] - _point[0][1]) * ( _y / _divby[1]) ) };
 
 				var _val = _ctx.getImageData( _pos.x, _pos.y, 1, 1)['data'][0];
 
@@ -182,48 +181,44 @@ Pattern.prototype = {
 
 		var _self         = this;
 		var _wrap_elem    = document.getElementById( 'cnv' );
-		var _cnv1_elem    = document.createElement( 'canvas' );
-		var _cnv2_elem    = document.createElement( 'canvas' );
-		var _ctx1         = _cnv1_elem.getContext( '2d' );
-		var _ctx2         = _cnv2_elem.getContext( '2d' );
+		var _cnv_elem     = document.createElement( 'canvas' );
+		var _ctx          = _cnv_elem.getContext( '2d' );
 		var _cell_img     = [];
 		var _cell_img_len = 16;
 		var _data         = this.getPatternArr();
 
 		var _size_x       = _size? _size: 60;
-		var _size_y       = Math.round( _size_x / Math.sqrt(3) );
+		var _size_y       = Math.round( _size_x / Math.sqrt( 3 ) );
 
-		_cnv1_elem.setAttribute('height', _size_y * 4 );
-		_cnv1_elem.setAttribute('width' , _size_x * 2 );
+		_cnv_elem.setAttribute( 'height', _size_y * 4 );
+		_cnv_elem.setAttribute( 'width' , _size_x * 2 );
 
 		for (var _i = -1; _i < 3; _i++) {
 
 			var _pure_i = _i + 1;
-			var _tri_pos = _pure_i % 2 == 0? [ 0,_size_x * -0.5] : [ _size_x * -0.5, 0];
+			var _tri_pos = _pure_i % 2 == 0? [ 0, _size_x * -0.5] : [ _size_x * -0.5, 0];
 			var _tri_dir = _pure_i % 2 == 0? 1 : 0;
 
 			for (var _j = -2; _j < 3; _j++) {
 
 				var _idx = Math.abs( _j ) + (Math.abs( Math.floor(_i /2) ) * 3);
 
-				_ctx1.fillStyle = _self.CELL_COLOR[ _data[_idx] ];
+				_ctx.fillStyle = _self.CELL_COLOR[ _data[_idx] ];
 
-				_ctx1.beginPath();
-				_ctx1.moveTo( 1000, _pure_i * _size_y);
-				_ctx1.lineTo( _tri_pos[0], _pure_i* _size_y);
-				_ctx1.lineTo( _tri_pos[1], ( _pure_i + 1 ) * _size_y);
-				_ctx1.lineTo( 1000, ( _pure_i + 1 ) * _size_y);
-				_ctx1.closePath();
+				_ctx.beginPath();
+				_ctx.moveTo( 1000, _pure_i * _size_y );
+				_ctx.lineTo( _tri_pos[0], _pure_i* _size_y );
+				_ctx.lineTo( _tri_pos[1], ( _pure_i + 1 ) * _size_y );
+				_ctx.lineTo( 1000, ( _pure_i + 1 ) * _size_y );
+				_ctx.closePath();
+				_ctx.fill();
 
-				_ctx1.fill();
-
-				_tri_pos[ (_j+2 + _tri_dir)%2 ] += _size_x;
+				_tri_pos[ ( _j + 2 + _tri_dir ) % 2 ] += _size_x;
 			}
 		}
-		var _uri = _cnv1_elem.toDataURL("image/png");
+		var _uri = _cnv_elem.toDataURL("image/png");
 
 		return _uri;
-
 
 	},
 
